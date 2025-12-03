@@ -12,7 +12,8 @@ A SwiftUI iOS app to track your bouldering sessions and climbing progress by dat
 
 - 📅 **Calendar View** - Browse and select dates to view and add boulders for specific days
 - 🏔️ **Boulder Management** - Add climbing sessions with name and difficulty level
-- 📊 **Statistics** - Track your total climbs and highest difficulty grade
+- � **Photo Support** - Attach photos from your photo library to each boulder
+- �📊 **Statistics** - Track your total climbs and highest difficulty grade
 - 📋 **All Climbs View** - See your complete climbing history
 - 💾 **Local Storage** - All data is saved locally on your device using UserDefaults
 - 🎯 **Date-Based Organization** - Organize your climbing sessions by date
@@ -74,7 +75,15 @@ BoulderingTracker/
 2. Select the date for your climbing session
 3. Enter the boulder name (e.g., "The Crimper")
 4. Choose the difficulty level (4A - 9A)
-5. Tap "Add Boulder"
+5. **Optional:** Tap "Choose Photo" to add a photo from your library
+6. Tap "Add Boulder"
+
+## 📸 Photo Feature
+
+- Upload photos of your boulders from your device's photo library
+- Photos are stored locally with your boulder data
+- View thumbnail previews in both the Calendar and All Climbs views
+- Remove photos before submitting if needed
 
 ## 🎯 Difficulty Levels
 
@@ -87,6 +96,7 @@ Supported grades: 4A, 4B, 4C, 5A, 5B, 5C, 6A, 6A+, 6B, 6B+, 6C, 6C+, 7A, 7B, 7C,
 - Name
 - Difficulty
 - Date
+- Photo (optional)
 
 ### Statistics
 - **Total Climbs** - Total number of boulders logged

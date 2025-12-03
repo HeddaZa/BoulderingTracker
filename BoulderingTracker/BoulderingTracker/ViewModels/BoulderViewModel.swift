@@ -11,8 +11,8 @@ class BoulderViewModel: ObservableObject {
     }
     
     // MARK: - CRUD Operations
-    func addBoulder(name: String, difficulty: String, date: Date = Date()) {
-        let newBoulder = Boulder(name: name, difficulty: difficulty, date: date)
+    func addBoulder(name: String, difficulty: String, date: Date = Date(), photoData: Data? = nil) {
+        let newBoulder = Boulder(name: name, difficulty: difficulty, date: date, photoData: photoData)
         boulders.append(newBoulder)
         saveBoulders()
     }

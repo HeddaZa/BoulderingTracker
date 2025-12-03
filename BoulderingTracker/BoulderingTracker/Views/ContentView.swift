@@ -75,18 +75,29 @@ struct ListView: View {
                 } else {
                     List {
                         ForEach(viewModel.getBoulders()) { boulder in
-                            VStack(alignment: .leading, spacing: 4) {
-                                HStack {
-                                    Text(boulder.name)
-                                        .fontWeight(.semibold)
-                                    Spacer()
-                                    Text(boulder.difficulty)
-                                        .font(.headline)
-                                        .foregroundColor(.orange)
+                            HStack(spacing: 12) {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    HStack {
+                                        Text(boulder.name)
+                                            .fontWeight(.semibold)
+                                        Spacer()
+                                        Text(boulder.difficulty)
+                                            .font(.headline)
+                                            .foregroundColor(.orange)
+                                    }
+                                    Text(formattedDate(boulder.date))
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
                                 }
-                                Text(formattedDate(boulder.date))
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
+                                
+                                if let photoData = boulder.photoData, let uiImage = UIImage(data: photoData) {
+                                    Image(uiImage: uiImage)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 60, height: 60)
+                                        .clipped()
+                                        .cornerRadius(4)
+                                }
                             }
                             .padding(.vertical, 4)
                         }

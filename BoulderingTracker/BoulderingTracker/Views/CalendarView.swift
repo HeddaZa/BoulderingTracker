@@ -105,7 +105,7 @@ struct CalendarView: View {
                     } else {
                         VStack(spacing: 8) {
                             ForEach(bouldersForSelectedDate) { boulder in
-                                HStack {
+                                HStack(spacing: 12) {
                                     VStack(alignment: .leading, spacing: 4) {
                                         Text(boulder.name)
                                             .fontWeight(.semibold)
@@ -114,6 +114,15 @@ struct CalendarView: View {
                                     Text(boulder.difficulty)
                                         .font(.headline)
                                         .foregroundColor(.orange)
+                                    
+                                    if let photoData = boulder.photoData, let uiImage = UIImage(data: photoData) {
+                                        Image(uiImage: uiImage)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 50, height: 50)
+                                            .clipped()
+                                            .cornerRadius(4)
+                                    }
                                 }
                                 .padding()
                                 .background(Color(.systemGray6))
