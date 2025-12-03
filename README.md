@@ -96,10 +96,6 @@ Supported grades: 4A, 4B, 4C, 5A, 5B, 5C, 6A, 6A+, 6B, 6B+, 6C, 6C+, 7A, 7B, 7C,
 
 All boulders are automatically saved to your device's local storage. Your climbing data persists between app sessions.
 
-## 📝 License
-
-This project is open source and available under the MIT License.
-
 ## 👤 Author
 
 **Hedda** - [@HeddaZa](https://github.com/HeddaZa)
